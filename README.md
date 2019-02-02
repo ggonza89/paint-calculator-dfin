@@ -46,4 +46,8 @@ To make it easier on everybody, it's best if we use a PR to diff what work was c
 
 ## Running Tests
 
-Write instructions for how a user executes the automated tests you created.
+Instructions on how to run tests
+1. Install requirements
+* `pip3 install -r requirements.txt`
+2. Run tests using following command
+* `python3 -m unittest`
