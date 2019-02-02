@@ -4,30 +4,30 @@
 
 <table name="Results" class="table">
     <tr>
-        <th>Room #</th>
-        <th>Amount of Feet to Paint</th>
-        <th>Gallons Required</th>
+        <th name="room-header">Room #</th>
+        <th name="amount-header">Amount of Feet to Paint</th>
+        <th name="gallons-header">Gallons Required</th>
     </tr>
     {% for row in all_data %}
     <tr>
-        <td>
+        <td name="room-{{ row['room'] }}">
             {{ row['room'] }}
         </td>
-        <td>
+        <td name="amount-{{ row['room'] }}">
             {{ row['ft'] }}
         </td>
-        <td>
+        <td name="gallons-{{ row['room'] }}">
             {{ row['gallons'] }}
         </td>
     </tr>
     {% endfor %}
 </table>
 
-<h5>Total Gallons Required: {{ total_gallons_required }}</h5>
+<h5 name="total-gallons-required">Total Gallons Required: {{ total_gallons_required }}</h5>
 
 <div style="text-align: center">
     <form action="/">
-        <input type="submit" value="Home"/>
+        <input id="home" type="submit" value="Home"/>
     </form>
 </div>
 {% endblock %}
