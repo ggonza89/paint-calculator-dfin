@@ -1,0 +1,34 @@
+Test Plan:
+
+- UI (selenium tests)
+    - Base Page
+        - should be tested in every page
+            - Correct page title
+            - Correct page header
+            - Correct page footer
+    - Home Page
+        - Correct label for input of rooms
+        - Validation of input
+            - submit button does not redirect when invalid
+        - Valid input redirects to Dimensions Page
+
+    - Dimensions Page
+        - Sanitation of rooms url param
+        - Correct number of rows and columns created per rooms url param
+        - Table has correct headers
+        - Invalid input does not redirect when submit button clicked
+            - per input column of L W and H
+        - Valid input redirects to results page
+
+    - Results Page
+        - Correct table headers
+        - Correct number of rows and columns per dimensions page rows and columns
+        - Correct calculation of "Amount of Feet to Paint"
+        - Correct calculation of "Gallons Required"
+        - Total Gallons required is a summation of all "Gallons Required" in table
+
+- Code (unittests)
+    - calculation of all rooms data
+        - calculation of an individual rooms data
+    - calculation of feet required to paint
+    - calculation of gallons required
